@@ -20,7 +20,7 @@
   "scripts": {
     "start": "node ./out/index",
     "build": "npx tsc",
-    "getApps": "node -p \"require('./applist').getApps().then(apps => console.log(apps))\""
+    "listapps": "node ./out/util/listapps"
   },
   "author": "",
   "license": "ISC"

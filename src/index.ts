@@ -16,7 +16,8 @@ const csgorp = new CSGORP(3000, null);
 const displayManagers: any = {
     'Adobe premiere pro.exe': new premiere(),
     'csgo.exe': new csgo(csgorp),
-    '\*': new system()
+    'GTA5.exe': new system('Playing GTA V', '👮', 'gta5'),
+    '\*': new system('Dead inside')
 };
 
 const update = (): void => {
@@ -34,12 +35,14 @@ const update = (): void => {
         let statusOut = {
             custom_status: {
                 text: '',
-                emoji_name: ''
+                emoji_name: '',
+                emoji_id: ''
             }
         }
 
         if (displayOut.status !== null) statusOut.custom_status.text = displayOut.status;
         if (displayOut.emoji_name !== null) statusOut.custom_status.emoji_name = displayOut.emoji_name;
+        if (displayOut.emoji_id !== null) statusOut.custom_status.emoji_id = displayOut.emoji_id;
         
         client.updatePresence({
             state: displayOut.lineTwo,

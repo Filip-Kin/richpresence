@@ -5,7 +5,8 @@ import { display, rp } from '../display';
 const MAP_NAMES: any = {
     'cs_office': 'Office',
     'de_dust2': 'Dust II',
-    'de_nuke': 'Nuke'
+    'de_nuke': 'Nuke',
+    'de_cache': 'Cache'
 }
 
 export class csgo extends display {
@@ -31,12 +32,12 @@ export class csgo extends display {
 
     public update(): rp {
         return <rp><unknown>{
-            lineOne: (this.map === 'csgo') ? 'Not playing a match yet' : 'Playing ' + MAP_NAMES[this.map] + ' ' + this.score,
+            lineOne: (this.map === 'csgo') ? 'Not playing a match yet' : 'Playing ' + ((MAP_NAMES[this.map])?MAP_NAMES[this.map]:this.map) + ' ' + this.score,
             lineTwo: this.stats || 'but it\s probably gonna be office',
             largeImage: this.map,
             smallImage: 'null',
-            emoji_id: null,
-            emoji_name: '🔫',
+            emoji_id: '741542785814888499',
+            emoji_name: null,
             status: 'Playing CSGO'
         }
     }

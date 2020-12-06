@@ -17,5 +17,6 @@ export interface rp {
     largeImage: 'null' | 'windows_logo' | 'premiere' | 'csgo' | 'cs_office' | 'de_cache' | 'de_dust2' | 'de_inferno' | 'de_mirage' | 'de_nuke' | 'de_overpass' | 'de_train'
     smallImage: 'null' | 'windows_logo' | 'premiere' | 'csgo' | 'cs_office' | 'de_cache' | 'de_dust2' | 'de_inferno' | 'de_mirage' | 'de_nuke' | 'de_overpass' | 'de_train'
     emoji_name: string | null
+    emoji_id: string | null
     status: string
 }
